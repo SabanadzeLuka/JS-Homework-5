@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Varta', sans-serif;
+}
+.themes {
+    height: 100vh;
+    display: flex;
+}
+.split {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+.split.left{
+    background-image: url(/src/images/lighttheme.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+}
+.split.right{
+    background-image:url(/src/images/darktheme.jpeg);
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+}
+#content-container{
+    display: none;
+}
+
+.split.left:hover {
+    flex: 2;
+    transition: all .5s ease-in-out;
+}
+
+.split.right:hover {
+    flex: 2;
+    transition: all .5s ease-in-out;
+}
