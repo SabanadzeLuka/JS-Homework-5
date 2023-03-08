@@ -71,6 +71,8 @@ body{
 .navbox ul li{
     text-decoration: none;
     display: flex;
+    font-size: 12px;
+    font-weight: bold;
     align-items: center;
     line-height: 55px;
     cursor: pointer;
@@ -130,3 +132,23 @@ body{
     font-size: 17px;
     transition: all .1s ease-in-out;
 }
+.planets_selector{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+}
+#valuebox {
+    background-color: black;
+}
+.planetimage {
+    width: 200px;
+    height: 200px;
+}
+.resulttext{
+    margin-top: 50px;
+}
+#planetImages{
+    width: 100%;
+}
+

@@ -47,3 +47,59 @@ for (let i = 0; i<textElement.length; i++ ) {
         iconElement[i].style.display = "none";
     })
 }
+
+
+const planetDistances = {
+    "Sun": 0,
+    "Mercury": 0.39,
+    "Venus": 0.72,
+    "Earth": 1,
+    "Mars": 1.52,
+    "Jupiter": 5.20,
+    "Saturn": 9.58,
+    "Uranus": 19.18,
+    "Neptune": 30.07
+};
+function calculateDistance() {
+    const planet1 = document.getElementById("planet_1").value;
+    const planet2 = document.getElementById("planet_2").value;
+    const distance = Math.abs(planetDistances[planet1] - planetDistances[planet2]);
+    document.getElementById("result").innerHTML = `${distance}`;
+}
+
+const buttonElement = document.getElementById("distancebutton");
+buttonElement.addEventListener("click", calculateDistance);
+
+function imageDisplay() {
+    const planet1 = document.getElementById("planet_1").value;
+    const planet2 = document.getElementById("planet_2").value;
+    const imageElement = document.getElementById("planetImages")
+
+    if(planet1 === "Earth") {
+        imageElement.src = "/src/images/earth.png"
+    }
+    else if(planet1 ==="Sun") {
+        imageElement.src ="/src/images/sun.png"
+    }
+    else if(planet1 ==="Mercury") {
+        imageElement.src ="/src/images/Mercury.png"
+    }
+    else if(planet1 ==="Venus") {
+        imageElement.src ="/src/images/Venus.png"
+    }
+    else if(planet1 ==="Mars") {
+        imageElement.src ="/src/images/Mars.png"
+    }
+    else if(planet1 ==="Jupiter") {
+        imageElement.src ="/src/images/Jupiter.png"
+    }
+    else if(planet1 ==="Saturn") {
+        imageElement.src ="/src/images/Saturn.png"
+    }
+    else if(planet1 ==="Uranus") {
+        imageElement.src ="/src/images/Uranus.png"
+    }
+    else if(planet1 ==="Neptune") {
+        imageElement.src ="/src/images/Neptune.png"
+    }
+}

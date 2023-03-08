@@ -46,7 +46,59 @@
                             </nav>
                         </div>
                         <div class="col-7">
-aa
+                            <div class="row">
+                                <div class="calculatorbox d-flex justify-content-around">
+                                    <div class="planet1box d-flex flex-column">
+                                        <label for="planet_1">Choose a Planet</label>
+                                        <select id="planet_1"  class="planets_selector" onchange="imageDisplay()">
+                                            <option value="Sun" id="valuebox">Sun</option>
+                                            <option value="Mercury" id="valuebox">Mercury</option>
+                                            <option value="Venus" id="valuebox">Venus</option>
+                                            <option value="Earth" selected id="valuebox">Earth</option>
+                                            <option value="Mars" id="valuebox">Mars</option>
+                                            <option value="Jupiter" id="valuebox">Jupiter</option>
+                                            <option value="Saturn" id="valuebox">Saturn</option>
+                                            <option value="Uranus" id="valuebox">Uranus</option>
+                                            <option value="Neptune" id="valuebox">Neptune</option>
+                                        </select>
+                                    </div>
+                                    <div class="planet2box d-flex flex-column">
+                                        <label for="planet_2">Choose a Planet</label>
+                                        <select id="planet_2" class="planets_selector" onchange="imageDisplay()>
+                                            <option value="Sun" id="valuebox">Sun</option>
+                                            <option value="Mercury" id="valuebox">Mercury</option>
+                                            <option value="Venus" id="valuebox">Venus</option>
+                                            <option value="Earth"id="valuebox">Earth</option>
+                                            <option value="Mars" id="valuebox">Mars</option>
+                                            <option value="Jupiter" id="valuebox">Jupiter</option>
+                                            <option value="Saturn" id="valuebox">Saturn</option>
+                                            <option value="Uranus" id="valuebox">Uranus</option>
+                                            <option value="Neptune" id="valuebox">Neptune</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col-12  d-flex">
+                                    <div class="col-6 d-flex justify-content-center">
+                                        <div class="planetimage d-flex align-items-center justify-content-center">
+                                            <img id="planetImages">     
+                                        </div>
+                                    </div>
+                                    <div class="col-6 d-flex justify-content-center">
+                                        <div class="planetimage d-flex align-items-center justify-content-center">
+                                            <img id="planetImages2"> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-5">
+                                    <div class="buttonbox d-flex justify-content-center flex-column align-items-center">
+                                        <button class="button" id="distancebutton">Calculate Distance</button>
+                                        <div class="resulttext" id="result">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
                         </div>
                         <div class="col-3">
                             <div class="subbox  d-flex justify-content-end flex-column">
