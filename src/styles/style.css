@@ -34,6 +34,9 @@ body{
 }
 #content-container{
     display: none;
+    width: 1536px;
+    padding: 0;
+    flex-direction: column;
 }
 
 .split.left:hover {
@@ -44,4 +47,86 @@ body{
 .split.right:hover {
     flex: 2;
     transition: all .5s ease-in-out;
+}
+#row {
+    width: 1320px;
+    height: 150px;
+}
+
+.header {
+    font-family: 'DotGothic16', sans-serif;
+}
+.navbox {
+    border: 1px solid white;
+    border-radius: 20px;
+    height: 350px;
+    width: 135px;
+}
+.navbox ul{
+    padding: 0;
+    padding-top: 55px;
+    width: 135px;
+    list-style: none;
+}
+.navbox ul li{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    line-height: 55px;
+    cursor: pointer;
+    padding-left: 20px;
+}
+.iconimg {
+    width: 40px;
+    height: 35px;
+}
+#hovering:hover{
+    padding-left: 20px;
+    transition: all .2s ease-in-out;
+}
+#icons {
+    width: 40px;
+    height: 35px;
+    display: none;  
+}
+.subbox{
+    position: relative;
+    top: 400px;
+}
+.subbox h2{
+    font-size: 14px;
+}
+.subbox p {
+    font-size: 16px;
+    font-weight: bold;
+}
+.input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    align-items: center;
+    width: 250px;
+    padding-left: 14px;
+    border-bottom: 1px solid #ffffff;
+    caret-color: transparent;
+    color: white;
+    
+}
+.input::placeholder {
+    color: white;
+    font-size: 14px;
+    opacity: 1;
+}
+.button {
+    background-color: transparent;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 14px;
+    color: white;
+    width: 175px;
+    height: 30px;
+}
+.button:hover{
+    font-size: 17px;
+    transition: all .1s ease-in-out;
 }
