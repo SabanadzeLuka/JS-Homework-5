@@ -59,12 +59,11 @@ body{
 .navbox {
     border: 1px solid white;
     border-radius: 20px;
-    height: 350px;
+    height: 375px;
     width: 135px;
 }
 .navbox ul{
     padding: 0;
-    padding-top: 55px;
     width: 135px;
     list-style: none;
 }
@@ -150,5 +149,24 @@ body{
 }
 #planetImages{
     width: 100%;
+}
+#planetImages2{
+    width: 100%;
+}
+.toggleThemes{
+    position: relative;
+    bottom: 35px;
+}
+#toggleLight{
+    cursor: pointer;
+}
+#toggleDark{
+    cursor: pointer;
+}
+#toggleLight:hover{
+    border-bottom: 2px solid white;
+}
+#toggleDark:hover{
+    border-bottom: 2px solid white;
 }
 

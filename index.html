@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Varta&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <title>Document</title>
 </head>
 <body>
@@ -34,14 +35,19 @@
                     <div class="row justify-content-around">
                         <div class="col-2">
                             <nav>
-                                <div class="navbox d-flex align-items-center justify-content-start" id="navbox">
+                                <div class="navbox d-flex align-items-center justify-content-start flex-column" id="navbox">
                                     <ul>
+                                        <li id="UTC"></li>
                                         <li><img class="iconimg" src="/src/images/iconalien.png"> SPACE</li>
                                         <li id="hovering"><img id="icons" src="/src/images/iconalien.png">ABOUT</li>
                                         <li id="hovering"><img id="icons" src="/src/images/iconalien.png">CONTACT</li>
                                         <li id="hovering"><img id="icons" src="/src/images/iconalien.png">WORK</li>
                                         <li id="hovering"><img id="icons" src="/src/images/iconalien.png">HELP</li>
                                     </ul>
+                                    <div class="toggleThemes d-flex justify-content-center gap-3">
+                                        <i class="bi bi-brightness-high-fill fa-2x" id="toggleLight"></i>
+                                        <i class="bi bi-moon fa-2x" id="toggleDark"></i>
+                                    </div>
                                 </div>
                             </nav>
                         </div>
@@ -64,7 +70,7 @@
                                     </div>
                                     <div class="planet2box d-flex flex-column">
                                         <label for="planet_2">Choose a Planet</label>
-                                        <select id="planet_2" class="planets_selector" onchange="imageDisplay()">
+                                        <select id="planet_2" class="planets_selector" onchange="imageDisplay1()">
                                             <option value="Sun" id="valuebox">Sun</option>
                                             <option value="Mercury" id="valuebox">Mercury</option>
                                             <option value="Venus" id="valuebox">Venus</option>

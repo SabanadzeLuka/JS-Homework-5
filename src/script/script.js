@@ -64,7 +64,7 @@ function calculateDistance() {
     const planet1 = document.getElementById("planet_1").value;
     const planet2 = document.getElementById("planet_2").value;
     const distance = Math.abs(planetDistances[planet1] - planetDistances[planet2]);
-    document.getElementById("result").innerHTML = `${distance}`;
+    document.getElementById("result").innerHTML = `Distance between the ${planet1} and the ${planet2} is ${distance} <b style="color:red">AU</b> (Astronomical Unit) `;
 }
 
 const buttonElement = document.getElementById("distancebutton");
@@ -72,8 +72,7 @@ buttonElement.addEventListener("click", calculateDistance);
 
 function imageDisplay() {
     const planet1 = document.getElementById("planet_1").value;
-    const planet2 = document.getElementById("planet_2").value;
-    const imageElement = document.getElementById("planetImages")
+    const imageElement = document.getElementById("planetImages");
 
     if(planet1 === "Earth") {
         imageElement.src = "/src/images/earth.png"
@@ -103,3 +102,54 @@ function imageDisplay() {
         imageElement.src ="/src/images/Neptune.png"
     }
 }
+function imageDisplay1 () {
+    const planet2 = document.getElementById("planet_2").value;
+    const imageElement2 = document.getElementById("planetImages2");
+    if(planet2 === "Earth") {
+        imageElement2.src = "/src/images/earth.png"
+    }
+    else if(planet2 ==="Sun") {
+        imageElement2.src ="/src/images/sun.png"
+    }
+    else if(planet2 ==="Mercury") {
+        imageElement2.src ="/src/images/Mercury.png"
+    }
+    else if(planet2 ==="Venus") {
+        imageElement2.src ="/src/images/Venus.png"
+    }
+    else if(planet2 ==="Mars") {
+        imageElement2.src ="/src/images/Mars.png"
+    }
+    else if(planet2 ==="Jupiter") {
+        imageElement2.src ="/src/images/Jupiter.png"
+    }
+    else if(planet2 ==="Saturn") {
+        imageElement2.src ="/src/images/Saturn.png"
+    }
+    else if(planet2 ==="Uranus") {
+        imageElement2.src ="/src/images/Uranus.png"
+    }
+    else if(planet2 ==="Neptune") {
+        imageElement2.src ="/src/images/Neptune.png"
+    }
+}
+
+window.onload = function() {
+    imageDisplay();
+    imageDisplay1();
+}
+
+function updateTime() {
+    const timeElement = new Date();
+    const timeDisplayElement = document.getElementById("UTC");
+    timeDisplayElement.innerText = "LOCAL TIME:" + " " + timeElement.getHours() + ":" + timeElement.getMinutes() + ":" + timeElement.getSeconds();
+  }
+  
+  setInterval(updateTime, 1000);
+
+const lightElement = document.getElementById("toggleLight");
+const darkElement = document.getElementById("toggleDark");
+
+lightElement.addEventListener("click", setLightTheme);
+darkElement.addEventListener("click", setDarkTheme);
+
